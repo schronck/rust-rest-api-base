@@ -1,0 +1,7 @@
+{
+  "subscriber": "my_server_logger",
+  "rust_log": "info",
+  "ip": "127.0.0.1",
+  "port": "8081",
+  "redis_url": "redis://127.0.0.1:6379"
+}

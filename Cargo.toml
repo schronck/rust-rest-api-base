@@ -1,0 +1,32 @@
+[package]
+name = "rust-api-template"
+description = "A template for REST APIs written in Rust"
+version = "0.1.0"
+authors = ["Shronk <ureshpohar@gmail.com>"]
+repository = "https://github.com/schronck/rust-api-template"
+readme = "README.md"
+keywords = ["api", "rest-api"]
+categories = [
+    "database", "data-structures"
+]
+edition = "2021"
+license = "MIT"
+
+[profile.dev]
+opt-level = 3
+
+[dev-dependencies]
+shiba = { version = "0.1.1", default-features = false }
+
+[dependencies]
+actix-cors = "0.6.3" 
+actix-limitation = "0.4.0"
+actix-web = { version = "4.2.1", default-features = false, features = ["macros"] }
+config = { version = "0.13.3", default-features = false, features = ["json"] }
+thiserror = { version = "1.0.37", default-features = false }
+tracing = { version = "0.1.37", features = ["log"] }
+tracing-actix-web = "0.7.4"
+tracing-bunyan-formatter = "0.3.7"
+tracing-log = "0.1.3"
+tracing-subscriber = { version = "0.3.17", features = ["registry", "env-filter"] }
+tokio = { version = "1.20.1", features = ["macros", "rt-multi-thread"] }
